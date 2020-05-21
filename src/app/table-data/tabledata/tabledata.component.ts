@@ -12,7 +12,7 @@ export class TabledataComponent implements OnInit {
 
   cols: any[];
 
-  toggle = 'table-cell';
+  togglecase = 'table-cell';
 
   selectedbook: Book;
 
@@ -23,22 +23,22 @@ export class TabledataComponent implements OnInit {
     this.service.getBooks().then(books => this.books = books);
     this.cols = [
       { field: 'name', header: 'Name', display: 'table-cell' },
-      {field: 'pages', header: 'Pages', display: this.toggle },
+      {field: 'pages', header: 'Pages', display: this.togglecase },
       { field: 'status', header: 'Status', display: 'table-cell' },
       { field: 'isbn', header: 'ISBN', display: 'table-cell'}
     ]
   }
 
   showOrHideColumn() {
-    if(this.toggle === 'table-cell') {
-      this.toggle = 'none';
+    if(this.togglecase === 'table-cell') {
+      this.togglecase = 'none';
     }
     else {
-      this.toggle = 'table-cell';
+      this.togglecase = 'table-cell';
     }
     this.cols = [
       { field: 'name', header: 'Name', display: 'table-cell' },
-      {field: 'pages', header: 'Pages', display: this.toggle },
+      {field: 'pages', header: 'Pages', display: this.togglecase },
       { field: 'status', header: 'Status', display: 'table-cell' },
       { field: 'isbn', header: 'ISBN', display: 'table-cell'}
     ]
