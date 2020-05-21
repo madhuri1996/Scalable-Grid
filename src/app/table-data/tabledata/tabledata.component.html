@@ -3,7 +3,8 @@
 </nav>
 <div class="container">
   <div class="row mt-5">
-    <div class="shadow p-4 mb-3 mt-5 bg-white rounded"><div class="col-md-12">
+    <button class="btn btn-primary mt-4" (click)="showOrHideColumn()">Show/Hide</button>
+    <div class="shadow p-4 mb-3 mt-2 bg-white rounded"><div class="col-md-12">
       <p-table [value]="books" [paginator]="true" [responsive]="true" [rows]="10"
         [showCurrentPageReport]="true"
         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
@@ -27,7 +28,7 @@
           </ng-template>
           <ng-template pTemplate="summary">
             <div style="text-align: left">
-                <span class="h6">Selected Book:</span> {{selectedbook ? selectedbook.name + ' - ' + selectedbook.pages + ' - ' + selectedbook.status + ' - ' + selectedbook.isbn : 'none'}}
+                <span class="h6">Selected Row:</span> {{selectedbook ? selectedbook.name + ' - ' + selectedbook.pages + ' - ' + selectedbook.status + ' - ' + selectedbook.isbn : 'none'}}
             </div>
           </ng-template>
         </p-table>

@@ -4,7 +4,8 @@ import { TabledataComponent } from './table-data/tabledata/tabledata.component';
 
 
 const routes: Routes = [
-  {path: '', component: TabledataComponent}
+  {path: '', redirectTo:'/grid', pathMatch:'full'},
+  {path:'grid', component: TabledataComponent }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

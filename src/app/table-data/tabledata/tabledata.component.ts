@@ -12,6 +12,8 @@ export class TabledataComponent implements OnInit {
 
   cols: any[];
 
+  toggle = 'table-cell';
+
   selectedbook: Book;
 
   constructor( private service: DataService) { }
@@ -21,8 +23,22 @@ export class TabledataComponent implements OnInit {
     this.service.getBooks().then(books => this.books = books);
     this.cols = [
       { field: 'name', header: 'Name', display: 'table-cell' },
-      { field: 'description', header: 'Description', display: 'none' },
-      {field: 'pages', header: 'Pages', display: 'table-cell' },
+      {field: 'pages', header: 'Pages', display: this.toggle },
+      { field: 'status', header: 'Status', display: 'table-cell' },
+      { field: 'isbn', header: 'ISBN', display: 'table-cell'}
+    ]
+  }
+
+  showOrHideColumn() {
+    if(this.toggle === 'table-cell') {
+      this.toggle = 'none';
+    }
+    else {
+      this.toggle = 'table-cell';
+    }
+    this.cols = [
+      { field: 'name', header: 'Name', display: 'table-cell' },
+      {field: 'pages', header: 'Pages', display: this.toggle },
       { field: 'status', header: 'Status', display: 'table-cell' },
       { field: 'isbn', header: 'ISBN', display: 'table-cell'}
     ]

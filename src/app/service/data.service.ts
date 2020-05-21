@@ -5,7 +5,6 @@ export interface Book {
   name;
   isbn,
   pages;
-  description;
   status;
 }
 
