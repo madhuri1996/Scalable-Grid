@@ -4,7 +4,7 @@ import { TabledataComponent } from './table-data/tabledata/tabledata.component';
 
 
 const routes: Routes = [
-  {path: 'grid', component: TabledataComponent}
+  {path: '', component: TabledataComponent}
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

@@ -21,8 +21,10 @@ export class TabledataComponent implements OnInit {
     this.service.getBooks().then(books => this.books = books);
     this.cols = [
       { field: 'name', header: 'Name', display: 'table-cell' },
-      {field: 'author', header: 'Author', display: 'table-cell' },
-      { field: 'price', header: 'Price', display: 'none'}
+      { field: 'description', header: 'Description', display: 'none' },
+      {field: 'pages', header: 'Pages', display: 'table-cell' },
+      { field: 'status', header: 'Status', display: 'table-cell' },
+      { field: 'isbn', header: 'ISBN', display: 'table-cell'}
     ]
   }
 

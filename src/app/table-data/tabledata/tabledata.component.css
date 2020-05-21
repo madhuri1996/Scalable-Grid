@@ -1,0 +1,9 @@
+.shadow {
+  box-shadow: 0 .5rem 1rem #bed2e8 !important;
+}
+.ui-table-wrapper {
+  border-radius:20px;
+}
+p-sorticon {
+  font-size: 9px !important;
+}
